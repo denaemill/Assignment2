@@ -12,7 +12,6 @@ class Assignment2:
         self.currentYear = currentYear
         self.currentYear = int(self.currentYear)
         age = abs(self.currentYear - self.year)
-        age = currentYear - age
         print("Your age is %d" % age)
 
     # Task 3
