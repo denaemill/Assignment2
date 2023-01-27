@@ -5,11 +5,10 @@ class Assignment2:
     def __init__(self, year):
         self.year = year
         self.year = int(self.year)
-        self.currentYear = 0
+        self.currentYear = 2023
 
     # Task 2
-    def tellAge(self, curYear):
-        self.currentYear = curYear
+    def tellAge(self):
         self.currentYear = int(self.currentYear)
         age = abs(self.currentYear - self.year)
         print("Your age is %d" % age)
