@@ -19,17 +19,13 @@ class Assignment2:
         test = abs(self.year - self.currentYear)
         ani = []
         i = 0
-        j = 0
 
-        while test > 0:
-                if i > test:
-                    break
-                elif i == 0:
+        while i < test - 10:
+                if i == 0:
                     i = i + 10
                 else:
                     ani.append(i)
                     i = i + 10
-                    j = j + 1
 
         return ani
 
@@ -91,7 +87,3 @@ class Assignment2:
 
         conn.close()
         sock.close()
-
-a = Assignment2(1991)
-ret = a.listAnniversaries()
-print(ret)
