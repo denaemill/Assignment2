@@ -20,7 +20,7 @@ class Assignment2:
         ani = []
         i = 0
 
-        while i < test - 10:
+        while i < test:
                 if i == 0:
                     i = i + 10
                 else:
