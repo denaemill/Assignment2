@@ -5,7 +5,7 @@ class Assignment2:
     def __init__(self, year):
         self.year = year
         self.year = int(self.year)
-        self.currentYear = 0
+        self.currentYear = 2023
 
     # Task 2
     def tellAge(self, currentYear):
@@ -29,12 +29,7 @@ class Assignment2:
                     i = i + 10
                     j = j + 1
 
-        print("[", end="")
-        for x in range(0, j):
-            if x == j - 1:
-                print("%d]" % ani[x])
-            else:
-                print("%d, " % ani[x], end = " ")
+        return ani
 
     # Task 4
     def modifyYear(self, n):
