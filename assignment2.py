@@ -49,21 +49,20 @@ class Assignment2:
     def checkGoodString(string):
 
         if len(string) < 9:
-            return bool(0)
+            return False
         elif ord(string[0]) < 97 and ord(string[0]) > 122:
-            return bool(0)
+            return False
 
         i = 0
         count = 0
         while i < len(string):
             if string[i].isdigit():
                 count = count + 1
+            if count > 1:
+                return False
             i = i + 1
 
-        if count > 1:
-            bool(0)
-        else:
-            return bool(1)
+        return True
 
     # Task 6
     @staticmethod
