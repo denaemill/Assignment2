@@ -50,7 +50,7 @@ class Assignment2:
 
         if len(string) < 9:
             return False
-        elif ord(string[0]) < 97:
+        elif ord(string[0]) >= 97 and ord(string[0]) <= 122:
             return False
 
         i = 0
