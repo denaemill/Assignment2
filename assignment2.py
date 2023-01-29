@@ -48,10 +48,11 @@ class Assignment2:
     @staticmethod
     def checkGoodString(string):
 
-        if len(string) < 9:
-            return True
-        elif ord(string[0]) < 97 and ord(string[0]) > 122:
-            return True
+        if len(string) < 10:
+            return False
+        if ord(string[0]) < 97 and ord(string[0]) > 122:
+            return False
+
 
         i = 0
         count = 0
@@ -59,10 +60,11 @@ class Assignment2:
             if string[i].isdigit():
                 count = count + 1
             if count > 1:
-                return True
+                return False
             i = i + 1
 
-        return False
+        return True
+
 
     # Task 6
     @staticmethod
@@ -89,9 +91,3 @@ class Assignment2:
 
         conn.close()
         sock.close()
-
-ret = Assignment2.checkGoodString("f1obar0more")
-print(ret)
-
-ret = Assignment2.checkGoodString("foobar0more")
-print(ret)
