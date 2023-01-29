@@ -48,20 +48,23 @@ class Assignment2:
     @staticmethod
     def checkGoodString(string):
 
+        tf = True
+
         if len(string) < 9:
-            return False
+            tf = False
         if string[0].isupper():
-            return False
+            tf = False
 
 
         count = 0
         for i in range(0, len(string)):
             if string[i].isdigit():
                 count = count + 1
-            if count > 1 and count < 1:
-                return False
 
-        return True
+        if count != 1:
+            tf = False
+
+        return tf
 
 
     # Task 6
@@ -89,3 +92,4 @@ class Assignment2:
 
         conn.close()
         sock.close()
+
