@@ -89,9 +89,3 @@ class Assignment2:
 
         conn.close()
         sock.close()
-
-ret = Assignment2.checkGoodString("f1obar0more")
-print(ret)
-
-ret = Assignment2.checkGoodString("foobar0more")
-print(ret)
