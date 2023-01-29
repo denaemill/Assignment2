@@ -58,7 +58,7 @@ class Assignment2:
         for i in range(0, len(string)):
             if string[i].isdigit():
                 count = count + 1
-            if count > 1:
+            if count > 1 and count < 1:
                 return False
 
         return True
