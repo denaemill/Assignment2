@@ -50,18 +50,16 @@ class Assignment2:
 
         if len(string) < 9:
             return False
-        if ord(string[0]) < 97 and ord(string[0]) > 122:
+        if string[0].isupper():
             return False
 
 
-        i = 0
         count = 0
-        while i < len(string):
+        for i in range(0, len(string)):
             if string[i].isdigit():
                 count = count + 1
             if count > 1:
                 return False
-            i = i + 1
 
         return True
 
@@ -91,3 +89,9 @@ class Assignment2:
 
         conn.close()
         sock.close()
+
+ret = Assignment2.checkGoodString("f1obar0more")
+print(ret)
+
+ret = Assignment2.checkGoodString("foobar0more")
+print(ret)
