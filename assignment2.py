@@ -70,26 +70,24 @@ class Assignment2:
     # Task 6
     @staticmethod
     def connectTcp(host, port):
+        HOST = socket.gethostbyname(host)
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-        HOST = host
-        PORT = port
 
-        sock.bind((HOST, PORT))
+        sock.bind((HOST, port))
         sock.listen(5)
         print('Waiting for incoming connections on', sock)
         conn, addr = sock.accept()
 
-        with conn:
-            print('Connected by', addr)
-            while True:
-                data = conn.recv(1024)
+        print('Connected by', addr)
+        while True:
+            data = conn.recv(1024)
 
-                if not data:
-                    break
+            if not data:
+                break
 
-                conn.send(data)
+            conn.send(data)
 
         conn.close()
         sock.close()
-
+        return True
