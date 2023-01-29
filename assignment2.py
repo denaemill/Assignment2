@@ -49,9 +49,9 @@ class Assignment2:
     def checkGoodString(string):
 
         if len(string) < 9:
-            return False
+            return bool(0)
         elif ord(string[0]) < 97 and ord(string[0]) > 122:
-            return False
+            return bool(0)
 
         i = 0
         count = 0
@@ -61,9 +61,9 @@ class Assignment2:
             i = i + 1
 
         if count > 1:
-            return False
+            bool(0)
         else:
-            return True
+            return bool(1)
 
     # Task 6
     @staticmethod
