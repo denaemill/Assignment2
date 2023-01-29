@@ -32,14 +32,17 @@ class Assignment2:
     # Task 4
     def modifyYear(self, n):
         strYear = str(self.year)
+        st = ""
 
         for i in range(0, n):
-            print("%s" % strYear[0:2], end = "")
+            st = st + strYear[0:2]
 
         result = self.year * n
-        result = str(result)
+        strResult = str(result)
 
-        print("%s" % result[::2])
+        st = st + strResult[::2]
+
+        return st
 
     # Task 5
     @staticmethod
@@ -87,3 +90,7 @@ class Assignment2:
 
         conn.close()
         sock.close()
+
+a = Assignment2(2000)
+ret = a.modifyYear(3)
+print(ret)
