@@ -48,7 +48,7 @@ class Assignment2:
     @staticmethod
     def checkGoodString(string):
 
-        if len(string) < 10:
+        if len(string) < 9:
             return False
         if ord(string[0]) < 97 and ord(string[0]) > 122:
             return False
