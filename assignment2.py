@@ -49,9 +49,9 @@ class Assignment2:
     def checkGoodString(string):
 
         if len(string) < 9:
-            return False
+            return True
         elif ord(string[0]) < 97 and ord(string[0]) > 122:
-            return False
+            return True
 
         i = 0
         count = 0
@@ -59,10 +59,10 @@ class Assignment2:
             if string[i].isdigit():
                 count = count + 1
             if count > 1:
-                return False
+                return True
             i = i + 1
 
-        return True
+        return False
 
     # Task 6
     @staticmethod
