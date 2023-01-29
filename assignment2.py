@@ -50,7 +50,7 @@ class Assignment2:
 
         if len(string) < 9:
             return False
-        elif ord(string[0]) >= 97 and ord(string[0]) <= 122:
+        elif ord(string[0]) < 97 and ord(string[0]) > 122:
             return False
 
         i = 0
@@ -91,6 +91,8 @@ class Assignment2:
         conn.close()
         sock.close()
 
-a = Assignment2(2000)
-ret = a.modifyYear(3)
+ret = Assignment2.checkGoodString("f1obar0more")
+print(ret)
+
+ret = Assignment2.checkGoodString("foobar0more")
 print(ret)
